@@ -4,7 +4,7 @@ const burger = require('../models/burger.js')
 
 router.get('/', function (req, res) {
   burger.all(function (data) {
-    var hbsObject = {
+    let hbsObject = {
       burgers: data
     }
     res.render('index', hbsObject)
@@ -20,7 +20,7 @@ router.post('/api/burgers', function (req, res) {
 })
 
 router.put('/api/burgers/:id', function (req, res) {
-  var burgerId = 'id = ' + req.params.id
+  let burgerId = 'id = ' + req.params.id
 
   burger.update({
     devoured: req.body.devoured
@@ -34,7 +34,7 @@ router.put('/api/burgers/:id', function (req, res) {
 })
 
 router.delete('/api/burgers/:id', function (req, res) {
-  var condition = 'id = ' + req.params.id
+  let condition = 'id = ' + req.params.id
 
   burger.delete(condition, function (result) {
     if (result.affectedRows === 0) {
