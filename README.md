@@ -36,6 +36,8 @@
 * Tutor Makism
 * BCS learning assistants
 * TA's Paul Hendrickson, Tommy Boone, Jake O'Thoole, Daniel Thao
+## Link to updated Portfolio
+[Updated Portfolio!](https://christiangoldman.github.io/Christians-Portfolio/portfolio.html)
 ## License ##
     MIT License
 
