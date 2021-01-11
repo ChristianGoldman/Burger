@@ -1,8 +1,8 @@
 $(document).on('click', '.burgerButtons', (event) => {
-  var id = event.target.dataset.id
-  var devouredState = event.target.dataset.devouredState
+  let id = event.target.dataset.id
+  let devouredState = event.target.dataset.devouredState
 
-  var newDevouredState = {
+  let newDevouredState = {
     devoured: devouredState
   }
 
@@ -19,7 +19,7 @@ $(document).on('click', '.burgerButtons', (event) => {
 $('.create-form').on('submit', function (event) {
   event.preventDefault()
 
-  var newBurger = {
+  let newBurger = {
     burger_name: $('#burgerNameInput').val().trim(),
     devoured: $('[name=devoured]:checked').val().trim()
   }
@@ -35,7 +35,7 @@ $('.create-form').on('submit', function (event) {
 })
 
 $('.deleteBurger').on('click', function (event) {
-  var id = $(this).data('id')
+  let id = $(this).data('id')
 
   $.ajax('/api/burgers/' + id, {
     type: 'DELETE'

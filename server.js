@@ -10,11 +10,11 @@ app.use(express.json())
 
 const exphbs = require('express-handlebars')
 
-app.engine('.hbs', exphbs({
+app.engine('handlebars', exphbs({
   defaultLayout: 'main',
-  extname: '.hbs'
+  extname: 'handlebars'
 }))
-app.set('view engine', 'hbs')
+app.set('view engine', 'handlebars')
 
 const routes = require('./controller/burgers_controller.js')
 
